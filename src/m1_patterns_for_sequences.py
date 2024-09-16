@@ -11,10 +11,18 @@ for ITERATING through SEQUENCES, including these patterns:
 Of course, these are not the only patterns, and some problems require
 combining these patterns, but this is a good base upon which to build.
 
-Authors: David Mutchler, Vibha Alangar, Dave Fisher, Matt Boutell, Mark Hays,
-         Mohammed Noureddine, Sana Ebrahimi, Sriram Mohan, their colleagues and
+Authors: David Mutchler, Rachel Krohn, Dave Fisher, Shawn Bohner, Sriram Mohan,
+         Amanda Stouder, Vibha Alangar, Mark Hays, Dave Henthorn, Matt Boutell,
+         Scott McClellan, Yiji Zhang, Mohammed Noureddine, Steve Chenoweth,
+         Claude Anderson, Michael Wollowski, Chandan Rupakheti,
+         Derek Whitley, Curt Clifton, Valerie Galluzzi, their colleagues and
          PUT_YOUR_NAME_HERE.
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+
+"""
+Academic Integrity: I got help on this module from:
+         PUT_HERE_THE_NAMES_OF_PEOPLE_WHO_HELPED_YOU_ON_THIS_MODULE_(IF_ANY).
+"""  # TODO: If you got help from anyone on this module, list their names here.
 
 import testing_helper
 import time
@@ -23,7 +31,7 @@ import random
 
 
 def main():
-    """ Calls the   TEST   functions in this module. """
+    """Calls the   TEST   functions in this module."""
     print("-----------------------------------------------")
     print("Un-comment each of the following TEST functions")
     print("as you implement the functions that they test.")
@@ -39,6 +47,7 @@ def main():
 # NOTE: In order to focus your attention on the CODE that you write using the
 #   PATTERNS, the TESTING functions all appear at the BOTTOM of this module.
 ###############################################################################
+
 
 # -----------------------------------------------------------------------------
 # TODO: 2. Read the following, ASKING QUESTIONS AS NEEDED.
@@ -302,92 +311,82 @@ def two_sequences_at_each_iteration(numbers_1, numbers_2):
 
 
 def run_test_count_sum_examine_items():
-    """ Tests the   count_sum_examine_items   function. """
+    """Tests the   count_sum_examine_items   function."""
     print()
     print("--------------------------------------------------")
     print("Testing the   count_sum_examine_items   function:")
     print("--------------------------------------------------")
 
-    format_string = '    count_sum_examine_items( {} )'
+    format_string = "    count_sum_examine_items( {} )"
     test_results = [0, 0]  # Number of tests passed, failed.
 
     # Test 1:
     sequence = [20, 4, 7, 13, 3, 40, 25]
     expected = 48
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = count_sum_examine_items(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 2:
     sequence = []
     expected = 0
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = count_sum_examine_items(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 3:
     sequence = [37]
     expected = 37
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = count_sum_examine_items(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 4:
     sequence = [38]
     expected = 0
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = count_sum_examine_items(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 5:
     sequence = [21, 4, 13, 3, 40, 25, 27, 31]
     expected = 120
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = count_sum_examine_items(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 6:
     sequence = [22, 4, 13, 3, 40, 25, 27, 31]
     expected = 99
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = count_sum_examine_items(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 7:
     sequence = [22, 4, 13, 3, 40, 25, 27, 32]
     expected = 68
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = count_sum_examine_items(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 8:
     sequence = range(1, 101, 2)
     expected = 2500
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = count_sum_examine_items(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 9:
     sequence = range(2, 101, 4)
     expected = 0
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = count_sum_examine_items(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 10:
     sequence = range(1, 10000, 3)
     expected = 8333333
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = count_sum_examine_items(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -395,21 +394,22 @@ def run_test_count_sum_examine_items():
 
 
 def run_test_find_item():
-    """ Tests the   find_item   function. """
+    """Tests the   find_item   function."""
     print()
     print("--------------------------------------------------")
     print("Testing the   find_item   function:")
     print("--------------------------------------------------")
 
-    format_string = '    find_item( {}, {} )'
+    format_string = "    find_item( {}, {} )"
     test_results = [0, 0]  # Number of tests passed, failed.
 
     # Test 1:
     sequence = [19, 32, 11, 6, 13, 6, 3, 14, 2]
     threshold = 10
     expected = 3
-    print_expected_result_of_test([sequence, threshold], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test(
+        [sequence, threshold], expected, test_results, format_string
+    )
     actual = find_item(sequence, threshold)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -417,8 +417,9 @@ def run_test_find_item():
     sequence = [19, 32, 11, 6, 13, 6, 3, 14, 2]
     threshold = 2
     expected = -99
-    print_expected_result_of_test([sequence, threshold], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test(
+        [sequence, threshold], expected, test_results, format_string
+    )
     actual = find_item(sequence, threshold)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -426,8 +427,9 @@ def run_test_find_item():
     sequence = [19, 12, 31]
     threshold = 20
     expected = 0
-    print_expected_result_of_test([sequence, threshold], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test(
+        [sequence, threshold], expected, test_results, format_string
+    )
     actual = find_item(sequence, threshold)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -435,8 +437,9 @@ def run_test_find_item():
     sequence = [29, 12, 11]
     threshold = 20
     expected = 1
-    print_expected_result_of_test([sequence, threshold], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test(
+        [sequence, threshold], expected, test_results, format_string
+    )
     actual = find_item(sequence, threshold)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -444,8 +447,9 @@ def run_test_find_item():
     sequence = [29, 42, 11]
     threshold = 20
     expected = 2
-    print_expected_result_of_test([sequence, threshold], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test(
+        [sequence, threshold], expected, test_results, format_string
+    )
     actual = find_item(sequence, threshold)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -453,8 +457,9 @@ def run_test_find_item():
     sequence = [29, 42, 21]
     threshold = 20
     expected = -99
-    print_expected_result_of_test([sequence, threshold], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test(
+        [sequence, threshold], expected, test_results, format_string
+    )
     actual = find_item(sequence, threshold)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -462,8 +467,9 @@ def run_test_find_item():
     sequence = list(range(100, 200)) + list(range(300, 50, -3))
     threshold = 100
     expected = 167
-    print_expected_result_of_test([sequence, threshold], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test(
+        [sequence, threshold], expected, test_results, format_string
+    )
     actual = find_item(sequence, threshold)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -471,8 +477,9 @@ def run_test_find_item():
     sequence = list(range(100, 200)) + list(range(300, 50, -3))
     threshold = 101
     expected = 0
-    print_expected_result_of_test([sequence, threshold], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test(
+        [sequence, threshold], expected, test_results, format_string
+    )
     actual = find_item(sequence, threshold)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -480,8 +487,9 @@ def run_test_find_item():
     sequence = list(range(100, 200)) + list(range(300, 50, -3))
     threshold = 99
     expected = 168
-    print_expected_result_of_test([sequence, threshold], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test(
+        [sequence, threshold], expected, test_results, format_string
+    )
     actual = find_item(sequence, threshold)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -489,8 +497,9 @@ def run_test_find_item():
     sequence = list(range(100, 200)) + list(range(300, 50, -3))
     threshold = 52
     expected = 183
-    print_expected_result_of_test([sequence, threshold], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test(
+        [sequence, threshold], expected, test_results, format_string
+    )
     actual = find_item(sequence, threshold)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -498,8 +507,9 @@ def run_test_find_item():
     sequence = list(range(100, 200)) + list(range(300, 50, -3))
     threshold = 51
     expected = -99
-    print_expected_result_of_test([sequence, threshold], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test(
+        [sequence, threshold], expected, test_results, format_string
+    )
     actual = find_item(sequence, threshold)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -507,100 +517,89 @@ def run_test_find_item():
 
 
 def run_test_find_best_item():
-    """ Tests the   find_best_item   function. """
+    """Tests the   find_best_item   function."""
     print()
     print("--------------------------------------------------")
     print("Testing the   find_best_item   function:")
     print("--------------------------------------------------")
 
-    format_string = '    find_best_item( {} )'
+    format_string = "    find_best_item( {} )"
     test_results = [0, 0]  # Number of tests passed, failed.
 
     # Test 1:
     sequence = [74, 102, 901, 98, 11, 22, 773]
     expected = 98
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = find_best_item(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 2:
     sequence = [88, 103, 99, 77, 89, 100]
     expected = 99
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = find_best_item(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 3:
     sequence = [99, 103, 88, 77, 89, 100]
     expected = 99
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = find_best_item(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 4:
     sequence = [88, 99, 103, 77, 89, 100]
     expected = 99
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = find_best_item(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 5:
     sequence = [88, 103, 77, 99, 89, 100]
     expected = 99
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = find_best_item(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 6:
     sequence = [88, 103, 89, 77, 99, 100]
     expected = 99
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = find_best_item(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 7:
     sequence = [88, 103, 89, 77, 100, 99]
     expected = 99
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = find_best_item(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 8:
     sequence = [100000]
     expected = 100000
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = find_best_item(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 9:
     sequence = [100000, 11]
     expected = 11
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = find_best_item(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 10:
     sequence = [88, 11, 22, 33, 44, 55, 66]
     expected = 88
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = find_best_item(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 10:
     sequence = [88, 11, 22, 33, 44, 55, 66]
     expected = 88
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = find_best_item(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -627,8 +626,7 @@ def run_test_find_best_item():
         sequence.append(68)  # 2nd best at end
 
         expected = best
-        print_expected_result_of_test([sequence], expected, test_results,
-                                      format_string)
+        print_expected_result_of_test([sequence], expected, test_results, format_string)
         actual = find_best_item(sequence)
         print_actual_result_of_test(expected, actual, test_results)
 
@@ -636,52 +634,47 @@ def run_test_find_best_item():
 
 
 def run_test_two_places_at_each_iteration():
-    """ Tests the   two_places_at_each_iteration   function. """
+    """Tests the   two_places_at_each_iteration   function."""
     print()
     print("------------------------------------------------------")
     print("Testing the   two_places_at_each_iteration   function:")
     print("------------------------------------------------------")
 
-    format_string = '    two_places_at_each_iteration( {} )'
+    format_string = "    two_places_at_each_iteration( {} )"
     test_results = [0, 0]  # Number of tests passed, failed.
 
     # Test 1:
     sequence = [19, 23, 23, 45, 50]
     expected = True
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = two_places_at_each_iteration(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 2:
     sequence = [19, 23, 20, 45, 42]
     expected = False
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = two_places_at_each_iteration(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 3:
     sequence = [-100, -50, -34, -2, 0, 0, 0, 0, 1, 3, 3]
     expected = True
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = two_places_at_each_iteration(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 4:
     sequence = [-100, -50, -34, -2, 0, 0, 0, -1, 1, 3, 3]
     expected = False
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = two_places_at_each_iteration(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 5:
     sequence = [-100, -150, -34, -2, 0, 0, 0, -1, 1, 3, 3]
     expected = False
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = two_places_at_each_iteration(sequence)
     print_actual_result_of_test(expected, actual, test_results)
     print_summary_of_test_results(test_results)
@@ -689,8 +682,7 @@ def run_test_two_places_at_each_iteration():
     # Test 6:
     sequence = [-100, -50, -34, -2, 0, 0, 0, -1, 1, 3, 3, -100000]
     expected = False
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = two_places_at_each_iteration(sequence)
     print_actual_result_of_test(expected, actual, test_results)
     print_summary_of_test_results(test_results)
@@ -698,8 +690,7 @@ def run_test_two_places_at_each_iteration():
     # Test 7:
     sequence = [1, 1, 1, 2, 2, 3, 100000]
     expected = True
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = two_places_at_each_iteration(sequence)
     print_actual_result_of_test(expected, actual, test_results)
     print_summary_of_test_results(test_results)
@@ -707,8 +698,7 @@ def run_test_two_places_at_each_iteration():
     # Test 8:
     sequence = [-100001, -100000]
     expected = True
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = two_places_at_each_iteration(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -716,21 +706,22 @@ def run_test_two_places_at_each_iteration():
 
 
 def run_test_two_sequences_at_each_iteration():
-    """ Tests the   two_sequences_at_each_iteration   function. """
+    """Tests the   two_sequences_at_each_iteration   function."""
     print()
     print("------------------------------------------------------")
     print("Testing the   two_sequences_at_each_iteration   function:")
     print("------------------------------------------------------")
 
-    format_string = '    two_sequences_at_each_iteration( {}, {} )'
+    format_string = "    two_sequences_at_each_iteration( {}, {} )"
     test_results = [0, 0]  # Number of tests passed, failed.
 
     # Test 1:
     sequence_1 = [5, 2, 7, 11, 8, 20]
     sequence_2 = [9, 1, 3, 20, 9, 40]
     expected = 5 + 1 + 3 + 11 + 8 + 20  # which is 48
-    print_expected_result_of_test([sequence_1, sequence_2], expected,
-                                  test_results, format_string)
+    print_expected_result_of_test(
+        [sequence_1, sequence_2], expected, test_results, format_string
+    )
     actual = two_sequences_at_each_iteration(sequence_1, sequence_2)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -738,8 +729,9 @@ def run_test_two_sequences_at_each_iteration():
     sequence_1 = [10, 5, 8, 4]
     sequence_2 = [20, 3, 8, 100]
     expected = 10 + 3 + 8 + 4  # which is 25
-    print_expected_result_of_test([sequence_1, sequence_2], expected,
-                                  test_results, format_string)
+    print_expected_result_of_test(
+        [sequence_1, sequence_2], expected, test_results, format_string
+    )
     actual = two_sequences_at_each_iteration(sequence_1, sequence_2)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -747,8 +739,9 @@ def run_test_two_sequences_at_each_iteration():
     sequence_1 = [20, 3, 8, 100]
     sequence_2 = [10, 5, 8, 4]
     expected = 10 + 3 + 8 + 4  # which is 25
-    print_expected_result_of_test([sequence_1, sequence_2], expected,
-                                  test_results, format_string)
+    print_expected_result_of_test(
+        [sequence_1, sequence_2], expected, test_results, format_string
+    )
     actual = two_sequences_at_each_iteration(sequence_1, sequence_2)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -756,8 +749,9 @@ def run_test_two_sequences_at_each_iteration():
     sequence_1 = [5, 200, 7, 11, 8, 20, 10, 14, 101]
     sequence_2 = [1, -10, 5, 20, 9, 40, 10, 20, 100]
     expected = 1 + -10 + 5 + 11 + 8 + 20 + 10 + 14 + 100  # which is 159
-    print_expected_result_of_test([sequence_1, sequence_2], expected,
-                                  test_results, format_string)
+    print_expected_result_of_test(
+        [sequence_1, sequence_2], expected, test_results, format_string
+    )
     actual = two_sequences_at_each_iteration(sequence_1, sequence_2)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -765,8 +759,9 @@ def run_test_two_sequences_at_each_iteration():
     sequence_1 = [5]
     sequence_2 = [1]
     expected = 1
-    print_expected_result_of_test([sequence_1, sequence_2], expected,
-                                  test_results, format_string)
+    print_expected_result_of_test(
+        [sequence_1, sequence_2], expected, test_results, format_string
+    )
     actual = two_sequences_at_each_iteration(sequence_1, sequence_2)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -774,8 +769,9 @@ def run_test_two_sequences_at_each_iteration():
     sequence_1 = [1]
     sequence_2 = [5]
     expected = 1
-    print_expected_result_of_test([sequence_1, sequence_2], expected,
-                                  test_results, format_string)
+    print_expected_result_of_test(
+        [sequence_1, sequence_2], expected, test_results, format_string
+    )
     actual = two_sequences_at_each_iteration(sequence_1, sequence_2)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -783,8 +779,9 @@ def run_test_two_sequences_at_each_iteration():
     sequence_1 = [10, 20, 30, 40, 50]
     sequence_2 = [-1, -1, -1, -1, -1]
     expected = -5
-    print_expected_result_of_test([sequence_1, sequence_2], expected,
-                                  test_results, format_string)
+    print_expected_result_of_test(
+        [sequence_1, sequence_2], expected, test_results, format_string
+    )
     actual = two_sequences_at_each_iteration(sequence_1, sequence_2)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -792,8 +789,9 @@ def run_test_two_sequences_at_each_iteration():
     sequence_1 = [10, 20, 30, 20, 10, 5, 4, 3, 2]
     sequence_2 = [-9, 19, 25, 15, 20, 9, 9, 9, 0]
     expected = -9 + 19 + 25 + 15 + 10 + 5 + 4 + 3 + 0  # which is 72
-    print_expected_result_of_test([sequence_1, sequence_2], expected,
-                                  test_results, format_string)
+    print_expected_result_of_test(
+        [sequence_1, sequence_2], expected, test_results, format_string
+    )
     actual = two_sequences_at_each_iteration(sequence_1, sequence_2)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -801,8 +799,9 @@ def run_test_two_sequences_at_each_iteration():
     sequence_1 = [-9, 19, 25, 15, 20, 9, 9, 9, 0]
     sequence_2 = [10, 20, 30, 20, 10, 5, 4, 3, 2]
     expected = -9 + 19 + 25 + 15 + 10 + 5 + 4 + 3 + 0  # which is 72
-    print_expected_result_of_test([sequence_1, sequence_2], expected,
-                                  test_results, format_string)
+    print_expected_result_of_test(
+        [sequence_1, sequence_2], expected, test_results, format_string
+    )
     actual = two_sequences_at_each_iteration(sequence_1, sequence_2)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -810,8 +809,9 @@ def run_test_two_sequences_at_each_iteration():
     sequence_1 = [5, 200, 7, 11, 8, 20, 10, 14, -1010]
     sequence_2 = [1, -10, 5, 20, 9, 40, 10, 20, -1000]
     expected = 1 + -10 + 5 + 11 + 8 + 20 + 10 + 14 + -1010  # which is -951
-    print_expected_result_of_test([sequence_1, sequence_2], expected,
-                                  test_results, format_string)
+    print_expected_result_of_test(
+        [sequence_1, sequence_2], expected, test_results, format_string
+    )
     actual = two_sequences_at_each_iteration(sequence_1, sequence_2)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -852,17 +852,19 @@ def sum_of_digits(number):
 # Do NOT change it.  You do NOT have to do anything with it.
 ###############################################################################
 
-def print_expected_result_of_test(arguments, expected,
-                                  test_results, format_string, suffix=''):
-    testing_helper.print_expected_result_of_test(arguments, expected,
-                                                 test_results, format_string,
-                                                 suffix)
+
+def print_expected_result_of_test(
+    arguments, expected, test_results, format_string, suffix=""
+):
+    testing_helper.print_expected_result_of_test(
+        arguments, expected, test_results, format_string, suffix
+    )
 
 
-def print_actual_result_of_test(expected, actual, test_results,
-                                precision=None):
-    testing_helper.print_actual_result_of_test(expected, actual,
-                                               test_results, precision)
+def print_actual_result_of_test(expected, actual, test_results, precision=None):
+    testing_helper.print_actual_result_of_test(
+        expected, actual, test_results, precision
+    )
 
 
 def print_summary_of_test_results(test_results):
@@ -888,8 +890,8 @@ else:
 try:
     main()
 except Exception:
-    print('ERROR - While running this test,', color='red')
-    print('your code raised the following exception:', color='red')
+    print("ERROR - While running this test,", color="red")
+    print("your code raised the following exception:", color="red")
     print()
     sys.stdout.flush()
     time.sleep(1)

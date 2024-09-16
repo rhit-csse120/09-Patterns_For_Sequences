@@ -4,16 +4,24 @@ one item at a time, using the ACCUMULATOR pattern.
   -- We will later see a more efficient way to build-up and/or modify
         sequences, namely by MUTATING their elements.
 
-Authors: David Mutchler, Vibha Alangar, Dave Fisher, Matt Boutell, Mark Hays,
-         Mohammed Noureddine, Sana Ebrahimi, Sriram Mohan, their colleagues and
+Authors: David Mutchler, Rachel Krohn, Dave Fisher, Shawn Bohner, Sriram Mohan,
+         Amanda Stouder, Vibha Alangar, Mark Hays, Dave Henthorn, Matt Boutell,
+         Scott McClellan, Yiji Zhang, Mohammed Noureddine, Steve Chenoweth,
+         Claude Anderson, Michael Wollowski, Chandan Rupakheti,
+         Derek Whitley, Curt Clifton, Valerie Galluzzi, their colleagues and
          PUT_YOUR_NAME_HERE.
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+
+"""
+Academic Integrity: I got help on this module from:
+         PUT_HERE_THE_NAMES_OF_PEOPLE_WHO_HELPED_YOU_ON_THIS_MODULE_(IF_ANY).
+"""  # TODO: If you got help from anyone on this module, list their names here.
 
 import rosegraphics as rg
 
 
 def main():
-    """ Calls the various   TEST   functions in this module. """
+    """Calls the various   TEST   functions in this module."""
     run_test_make_simple_list()
     run_test_make_simple_string()
     run_test_make_less_simple_string()
@@ -28,7 +36,7 @@ def main():
 
 
 def run_test_make_simple_list():
-    """ Tests the   make_simple_list    function. """
+    """Tests the   make_simple_list    function."""
     # -------------------------------------------------------------------------
     # TODO: 2. Implement this TEST function.
     #   It TESTS the  make_simple_list  function defined below.
@@ -78,7 +86,7 @@ def make_simple_list(m, n):
 
 
 def run_test_make_simple_string():
-    """ Tests the   make_simple_string    function. """
+    """Tests the   make_simple_string    function."""
     # -------------------------------------------------------------------------
     # TODO: 4. Implement this TEST function.
     #   It TESTS the  make_simple_string  function defined below.
@@ -119,7 +127,7 @@ def make_simple_string(m, n):
 
 
 def run_test_make_less_simple_string():
-    """ Tests the   make_less_simple_string    function. """
+    """Tests the   make_less_simple_string    function."""
     # -------------------------------------------------------------------------
     # TODO: 6. Implement this TEST function.
     #   It TESTS the  make_less_simple_string  function defined below.
@@ -162,7 +170,7 @@ def make_less_simple_string(m, n):
 
 
 def run_test_draw_shapes():
-    """ Tests the   draw_shapes    function. """
+    """Tests the   draw_shapes    function."""
     print()
     print("-----------------------------------------------------------")
     print("Testing the   draw_shapes   function:")
@@ -178,9 +186,11 @@ def run_test_draw_shapes():
     # Test 1 is ALREADY DONE (here).
     # -------------------------------------------------------------------------
     window = rg.RoseWindow(500, 330, "draw_shapes, two tests")
-    circles = [rg.Circle(rg.Point(50, 50), 50),
-               rg.Circle(rg.Point(120, 50), 20),
-               rg.Circle(rg.Point(250, 170), 130)]
+    circles = [
+        rg.Circle(rg.Point(50, 50), 50),
+        rg.Circle(rg.Point(120, 50), 20),
+        rg.Circle(rg.Point(250, 170), 130),
+    ]
 
     circles[0].fill_color = "red"
     circles[1].fill_color = "white"
@@ -198,13 +208,15 @@ def run_test_draw_shapes():
     rect_width = 100
     rect_height = 160
     rect_center = rg.Point(350, 100)
-    various = [rg.Circle(rg.Point(400, 50), 30),
-               rg.Rectangle(rg.Point(rect_center.x - rect_width / 2,
-                                     rect_center.y - rect_height / 2),
-                            rg.Point(rect_center.x + rect_width / 2,
-                                     rect_center.y + rect_height / 2)),
-               rg.Circle(rg.Point(400, 300), 80),
-               rg.Line(rg.Point(0, 0), rg.Point(100, 330))]
+    various = [
+        rg.Circle(rg.Point(400, 50), 30),
+        rg.Rectangle(
+            rg.Point(rect_center.x - rect_width / 2, rect_center.y - rect_height / 2),
+            rg.Point(rect_center.x + rect_width / 2, rect_center.y + rect_height / 2),
+        ),
+        rg.Circle(rg.Point(400, 300), 80),
+        rg.Line(rg.Point(0, 0), rg.Point(100, 330)),
+    ]
     various[0].fill_color = "green"
     various[1].fill_color = "yellow"
     various[2].fill_color = "red"
@@ -253,7 +265,7 @@ def draw_shapes(shapes, window):
 
 
 def run_test_rectangles_from_circles():
-    """ Tests the   rectangles_from_circles    function. """
+    """Tests the   rectangles_from_circles    function."""
     print()
     print("-----------------------------------------------------------")
     print("Testing the   rectangles_from_circles   function:")
@@ -268,12 +280,13 @@ def run_test_rectangles_from_circles():
     # -------------------------------------------------------------------------
     # Test 1 is ALREADY DONE (here).
     # -------------------------------------------------------------------------
-    window = rg.RoseWindow(650, 350,
-                           "rectangles_from_circles, two tests")
-    circles = [rg.Circle(rg.Point(50, 80), 40),
-               rg.Circle(rg.Point(150, 50), 30),
-               rg.Circle(rg.Point(300, 100), 50),
-               rg.Circle(rg.Point(220, 70), 60)]
+    window = rg.RoseWindow(650, 350, "rectangles_from_circles, two tests")
+    circles = [
+        rg.Circle(rg.Point(50, 80), 40),
+        rg.Circle(rg.Point(150, 50), 30),
+        rg.Circle(rg.Point(300, 100), 50),
+        rg.Circle(rg.Point(220, 70), 60),
+    ]
     circles[0].fill_color = "red"
     circles[1].fill_color = "white"
     circles[2].fill_color = "blue"

@@ -6,10 +6,12 @@ This module demonstrates OVERLOADING the  +  symbol:
 
 This module also demonstrates the   STR   function.
 
-Authors: David Mutchler, Vibha Alangar, Dave Fisher, Matt Boutell, Mark Hays,
-         Mohammed Noureddine, Sana Ebrahimi, Sriram Mohan, and their colleagues.
+Authors: David Mutchler, Rachel Krohn, Dave Fisher, Shawn Bohner, Sriram Mohan,
+         Amanda Stouder, Vibha Alangar, Mark Hays, Dave Henthorn, Matt Boutell,
+         Scott McClellan, Yiji Zhang, Mohammed Noureddine, Steve Chenoweth,
+         Claude Anderson, Michael Wollowski, Chandan Rupakheti,
+         Derek Whitley, Curt Clifton, Valerie Galluzzi, and their colleagues.
 """
-
 
 # -----------------------------------------------------------------------------
 #  Students: Read and run this program.  There is nothing else
@@ -22,7 +24,7 @@ Authors: David Mutchler, Vibha Alangar, Dave Fisher, Matt Boutell, Mark Hays,
 
 
 def main():
-    """ Demonstrates OVERLOADING the  +  symbol. """
+    """Demonstrates OVERLOADING the  +  symbol."""
     # -------------------------------------------------------------------------
     # First example below:  computes 5 + 33 (addition, as in arithmetic)
     # Second example below: stitches together the two lists.

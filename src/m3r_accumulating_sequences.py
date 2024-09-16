@@ -4,10 +4,18 @@ one item at a time, using the ACCUMULATOR pattern.
   -- We will later see a more efficient way to build-up and/or modify
         sequences, namely by MUTATING their elements.
 
-Authors: David Mutchler, Vibha Alangar, Dave Fisher, Matt Boutell, Mark Hays,
-         Mohammed Noureddine, Sana Ebrahimi, Sriram Mohan, their colleagues and
+Authors: David Mutchler, Rachel Krohn, Dave Fisher, Shawn Bohner, Sriram Mohan,
+         Amanda Stouder, Vibha Alangar, Mark Hays, Dave Henthorn, Matt Boutell,
+         Scott McClellan, Yiji Zhang, Mohammed Noureddine, Steve Chenoweth,
+         Claude Anderson, Michael Wollowski, Chandan Rupakheti,
+         Derek Whitley, Curt Clifton, Valerie Galluzzi, their colleagues and
          PUT_YOUR_NAME_HERE.
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+
+"""
+Academic Integrity: I got help on this module from:
+         PUT_HERE_THE_NAMES_OF_PEOPLE_WHO_HELPED_YOU_ON_THIS_MODULE_(IF_ANY).
+"""  # TODO: If you got help from anyone on this module, list their names here.
 
 
 # -----------------------------------------------------------------------------
@@ -75,7 +83,7 @@ def build_list():
         [0, 1, 4, 9, 16, 25, 36, 49, 64, 81] """
     sequence = []
     for k in range(10):
-        sequence = sequence + [k ** 2]
+        sequence = sequence + [k**2]
 
     print(sequence)
 
@@ -102,7 +110,7 @@ def build_tuple():
         (0, 1, 4, 9, 16, 25, 36, 49, 64, 81) """
     sequence = ()
     for k in range(10):
-        sequence = sequence + (k ** 2,)
+        sequence = sequence + (k**2,)
 
     print(sequence)
 
@@ -128,7 +136,7 @@ def build_string():
         0 1 4 9 16 25 36 49 64 81 """
     sequence = ""
     for k in range(10):
-        sequence = sequence + str(k ** 2) + " "
+        sequence = sequence + str(k**2) + " "
 
     print(sequence)
 
