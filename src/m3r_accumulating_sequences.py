@@ -16,6 +16,8 @@ Authors: David Mutchler, Rachel Krohn, Dave Fisher, Shawn Bohner, Sriram Mohan,
 Academic Integrity: I got help on this module from:
          PUT_HERE_THE_NAMES_OF_PEOPLE_WHO_HELPED_YOU_ON_THIS_MODULE_(IF_ANY).
 """  # TODO: If you got help from anyone on this module, list their names here.
+import sys
+import time
 
 
 # -----------------------------------------------------------------------------
@@ -143,5 +145,15 @@ def build_string():
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
+# The   try .. except   prevents error messages on the console from being
+# intermingled with ordinary output to the console.
 # -----------------------------------------------------------------------------
-main()
+try:
+    main()
+except Exception:
+    print("ERROR - While running this test,", color="red")
+    print("your code raised the following exception:", color="red")
+    print()
+    sys.stdout.flush()
+    time.sleep(1)
+    raise

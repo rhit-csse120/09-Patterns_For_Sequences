@@ -6,7 +6,7 @@ for ITERATING through SEQUENCES, including:
   -- FIND-BEST-ITEM
   -- TWO-PLACES-AT-EACH-ITERATION
   -- TWO-SEQUENCES-AT-EACH-ITERATION
-  -- BUILD-A-SEQUENCE 
+  -- BUILD-A-SEQUENCE
 Additionally, they let you practice when and how you should iterate
 through PART of the sequence versus ALL of the sequence.
 

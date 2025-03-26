@@ -18,6 +18,8 @@ Academic Integrity: I got help on this module from:
 """  # TODO: If you got help from anyone on this module, list their names here.
 
 import rosegraphics as rg
+import sys
+import time
 
 
 def main():
@@ -378,5 +380,15 @@ def rectangles_from_circles(circles):
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
+# The   try .. except   prevents error messages on the console from being
+# intermingled with ordinary output to the console.
 # -----------------------------------------------------------------------------
-main()
+try:
+    main()
+except Exception:
+    print("ERROR - While running this test,", color="red")
+    print("your code raised the following exception:", color="red")
+    print()
+    sys.stdout.flush()
+    time.sleep(1)
+    raise
